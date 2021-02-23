@@ -1,0 +1,7 @@
+xaaphrodite_2012_1,2012,xaaphrodite,Gramedia,Object Oriented Programming (OOP)
+PramoedyaAnantatoer_2001_1,2001,xmmockingjay,Gramedia,IDE (Integrated Development Environment)
+purcell_2009_1,2009,Eddie,willey,PYTHON
+faqihza_2019_1,2019,Dodol,Gramedia,Belajar C++
+faqihza_2019_2,2019,Bejo Taslim,Gramedia,Parallel Universes
+faqihza_2019_3,2019,Sutedjo,Gramedia,JAVA
+ucup_2020_1,2020,Aceng Jemboet,Kompas,Cara Sukses Kencing Sambil Salto
