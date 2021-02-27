@@ -10,11 +10,11 @@ github		: https://github.com/xaaphrodite
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.Reader;
-import java.io.StringReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+import javax.swing.JButton;
 import javax.swing.JFileChooser;
+
 
 public class Main {
 // Program Beginning----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
@@ -40,7 +40,7 @@ public class Main {
                 switch (userInput) {
                     case "1":
                     	ClearScreen();
-                        System.out.println("---show database---");
+                    //  System.out.println("---show database---");
                         ListDatabase();
                         break;
                     case "2":
@@ -106,11 +106,18 @@ public class Main {
 // Core Program----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
     
     private static void ListDatabase() throws IOException{
-        FileReader fInput;
+    	FileReader fInput;
         BufferedReader bufferInput;
-      
+        JButton open = new JButton();
+        JFileChooser file = new JFileChooser();
+
+        file.setCurrentDirectory(new java.io.File(""));
+        file.setDialogTitle("Hemllo World!");
+        file.setFileSelectionMode(JFileChooser.FILES_ONLY);
+        if (file.showOpenDialog(open) == JFileChooser.APPROVE_OPTION) {	
+        } 
         try {
-            fInput = new FileReader("D:\\admin\\Integrated Development Environment\\workspace\\eclipse\\database\\src\\com\\project\\database.txt");
+            fInput = new FileReader(file.getSelectedFile().getAbsolutePath());
             bufferInput = new BufferedReader(fInput);
         } catch (Exception error){
             System.err.println("File not found!");
@@ -126,7 +133,7 @@ public class Main {
         while(data != null) {
             nomorData++;
 
-            StringTokenizer stringToken = new StringTokenizer(data, ",");
+            StringTokenizer stringToken = new StringTokenizer(data,",");
 
             stringToken.nextToken();
             System.out.printf("| %-2s", nomorData);
@@ -140,10 +147,10 @@ public class Main {
         }
 
         System.out.println("+---+---------------------+---------------------+---------------------+-------------------------------------------------+");
+    
     }
 
 }
-
 
 
 
